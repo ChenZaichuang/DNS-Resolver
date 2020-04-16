@@ -1,1 +1,0 @@
-cd python_utils && git pull && cd ..

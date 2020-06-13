@@ -28,7 +28,7 @@ class DNSResolver:
             if print_error:
                 print(f'Timeout to get ip of {host} from {dns_server}')
             return set()
-        except dns.resolver.NXDOMAIN:
+        except (dns.resolver.NXDOMAIN, dns.resolver.NoNameservers):
             if print_error:
                 print(f'No ip found for {host} from {dns_server}')
             return set()
